@@ -3,26 +3,6 @@
 /* eslint-disable no-unused-vars */
 import { model, models, Schema } from "mongoose";
 
-//clerkid, email, username, photo, 
-//firstname, lastname, planid, creditbalance
-
-//clerkId needed to modify it with clerk 
-// export interface IUser extends Document {
-//     clerkId: string;
-//     email: string;
-//     username: string;
-//     photo?: {
-//         url: string;
-//         publicId: string;
-//     };
-//     firstname: string;
-//     lastname: string;
-//     planId: string;
-//     creditBalance: number;
-//     createdAt?: Date;
-//     updatedAt?: Date;
-// }
-
 
 const UserSchema = new Schema({
     clerkId: {type: String, required: true, unique: true},
