@@ -1,4 +1,6 @@
-import { create } from "domain";
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { model, models, Schema } from "mongoose";
 
 const TransactionSchema = new Schema({

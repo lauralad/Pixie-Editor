@@ -1,9 +1,11 @@
 //add clerk auth provider
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import {
   ClerkProvider,
   SignInButton,

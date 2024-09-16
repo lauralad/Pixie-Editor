@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React from 'react'
-import { UserButton } from '@clerk/nextjs'
 
 //home page using the root layout
 const Home = () => {
@@ -7,7 +9,6 @@ const Home = () => {
     <div>
       <p>Home</p>
 
-      {/* <UserButton afterSignOutUrl="/"/> */}
     </div>
   )
 }
