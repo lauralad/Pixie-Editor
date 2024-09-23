@@ -91,6 +91,11 @@ export async function POST(req: Request) {
 
   // UPDATE
   if (eventType === "user.updated") {
+    console.log("Clerk  public:", process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
+    console.log("Clerk  Secret:", process.env.CLERK_SECRET_KEY);
+    console.log("Clerk Webhook Secret:", process.env.WEBHOOK_SECRET);
+     // Step 2: Log headers to verify they are coming correctly from Clerk
+    console.log("Request Headers:", req.headers);
     const { id, image_url, first_name, last_name, username } = evt.data;
 
     const user = {
