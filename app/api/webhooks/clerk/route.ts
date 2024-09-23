@@ -59,8 +59,10 @@ export async function POST(req: Request) {
 
   // CREATE
   if (eventType === "user.created") {
+    // all event user data will be saved in evt.data
     const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
 
+    // save extracted data to a new user object
     const user = {
       clerkId: id,
       email: email_addresses[0].email_address,
@@ -70,9 +72,12 @@ export async function POST(req: Request) {
       photo: image_url,
     };
 
+    // then we call the fxn to create new user with the data
+    // from lib/actions/user.actions.ts
     const newUser = await createUser(user);
 
     // Set public metadata
+    // merge the clerk id with our own user id
     if (newUser) {
       await clerkClient.users.updateUserMetadata(id, {
         publicMetadata: {
