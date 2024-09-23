@@ -10,6 +10,7 @@ import { redirect } from 'next/navigation';
 
 const AddTransformationTypePage = async ({params: {type}}: SearchParamProps) => {
   const {userId} = auth();
+  console.log("Fetched userId from Clerk:", userId);
   // need our id _id not the clerkId from clerk
   const transformation = transformationTypes[type];
   if (!userId) {
